@@ -1,5 +1,5 @@
-# trainploration
-📊 Analyse Exploratoire de la Ponctualité des Trains Transilien
+# trainploration : Analyse Exploratoire de la Ponctualité des Trains Transilien
+
 🎯 Objectif
 
 Ce projet vise à analyser l’évolution de la ponctualité des lignes Transilien (Ile-de-France) depuis le début des mesures disponibles, en identifiant les lignes les plus et les moins ponctuelles, à la fois sur l'ensemble de la période et spécifiquement depuis janvier 2024.
@@ -61,7 +61,12 @@ Ce projet vise à analyser l’évolution de la ponctualité des lignes Transili
     La ligne K domine clairement avec de nombreuses apparitions en tête de classement.
 
 👉 Visualisation :
-Bar chart interactif affichant le nombre de mois où chaque ligne a été la plus ponctuelle.
+Visuel montrant les lignes avec les meilleures ponctualités depuis janvier 2013
+![best_over_time](https://github.com/user-attachments/assets/4eb2ec7a-d70f-4003-b934-b2819463b3c7)
+
+Et depuis 2024 
+![best_since_2024](https://github.com/user-attachments/assets/27ae069f-92a8-4380-a61f-3ea9fc63f2bf)
+
 🚨 Lignes les moins ponctuelles
 📅 Sur toute la période
 
@@ -72,7 +77,12 @@ Bar chart interactif affichant le nombre de mois où chaque ligne a été la plu
     La ligne B se distingue par des résultats particulièrement bas.
 
 👉 Visualisation :
-Bar chart interactif illustrant les fréquences d’apparition en bas du classement.
+Visuel montrant les lignes avec les moins bonnes ponctualités depuis janvier 2013
+![worst_over_time](https://github.com/user-attachments/assets/420581de-c001-4c75-b8f2-ab00ad99ff16)
+
+Et depuis 2024
+![worst_since_2024](https://github.com/user-attachments/assets/d9bd4034-d521-4408-97fd-69a16a47bc9d)
+
 📈 Évolution temporelle
 Comparaison des meilleures lignes
 
@@ -93,10 +103,6 @@ Comparaison des pires lignes
 👉 Visualisations :
 
     Lignes de temps interactives avec couleurs personnalisées
-
-    Seuil de référence à 80 % ajouté pour évaluer les performances
-
-    Annotations automatiques des min/max pour chaque ligne
 
 📊 Analyse comparative – Focus sur 4 lignes
 
