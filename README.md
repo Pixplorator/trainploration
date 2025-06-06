@@ -1,149 +1,78 @@
-# trainploration : Analyse Exploratoire de la Ponctualité des Trains Transilien
+# Trainploration : Ponctualité du Réseau Transilien (RER et Transilien SNCF)
 
-🎯 Objectif
+## Résumé Exécutif
 
-Ce projet vise à analyser l’évolution de la ponctualité des lignes Transilien (Ile-de-France) depuis le début des mesures disponibles, en identifiant les lignes les plus et les moins ponctuelles, à la fois sur l'ensemble de la période et spécifiquement depuis janvier 2024.
+Cette analyse porte sur l'évolution de la ponctualité du réseau Transilien, basée sur des données mensuelles couvrant plusieurs années. L'étude révèle des disparités significatives entre les lignes, avec des tendances d'amélioration pour certaines et des défis persistants pour d'autres.
 
-🧩 Données
+## Méthodologie
 
-    Source : Fichier ponctualite-mensuelle-transilien.csv
+L'analyse s'appuie sur les données de ponctualité mensuelle du Transilien. Les valeurs manquantes ont été traitées en utilisant la médiane par date, puis la médiane globale pour les cas résiduels.
 
-    Période : De janvier 2013 à avril 2025
+## Principales Conclusions
 
-    Colonnes clés :
+### Performances Globales par Ligne
 
-        Date : Mois de la mesure
+**Lignes les plus performantes :**
+- **Ligne H** : Se distingue comme la ligne la plus ponctuelle de manière récurrente au fil des années
+![best_over_time](https://github.com/user-attachments/assets/f7c3cb62-e97d-4659-aebe-f53605774348)
 
-        Ligne : Code de la ligne Transilien
 
-        Taux de ponctualité : Pourcentage de trains à l’heure
+- **Ligne K** : Affiche également d'excellents résultats, particulièrement depuis 2024
+![best_since_2024](https://github.com/user-attachments/assets/e15f946b-b301-4a04-a45c-6e208ed45227)
 
-        Nombre de voyageurs à l'heure pour un voyageur en retard : Mesure complémentaire d’impact
 
-⚙️ Méthodologie
 
-    Préparation
+**Lignes les moins performantes :**
+- **Ligne A** : Régulièrement identifiée comme la moins ponctuelle du réseau
+![worst_over_time](https://github.com/user-attachments/assets/f59ae9b7-f6a1-4092-a0b4-2fc42b9c9ffa)
 
-        Conversion de la colonne Date en format datetime
 
-        Tri chronologique
+- **Ligne B** : Se caractérise par des résultats particulièrement bas et constants
+![worst_since_2024](https://github.com/user-attachments/assets/40b725fe-d53a-4e15-9d3f-fa60ce02a7b3)
 
-        Filtrage des données depuis janvier 2024 pour certaines analyses
 
-    Identification des performances extrêmes
 
-        Pour chaque mois, identification de la ligne avec :
+### Évolution Temporelle Détaillée
 
-            La meilleure ponctualité
+#### Lignes Performantes (H & K)
 
-            La pire ponctualité
+**Ligne H :**
+- Maintient une performance relativement stable et élevée tout au long de la période analysée
+- De manière générale, elle a une performance largement au-dessus de la médiane toutes lignes confondues
 
-        Comptage du nombre d’occurrences par ligne (meilleure / pire performance)
+**Ligne K :**
+- Présente une transformation notable à partir de septembre 2016 avec une nette amélioration
+- Atteint de très performances depuis décembre 2021
+- Illustre un cas de réussite en matière d'amélioration opérationnelle
 
-    Mesures de dispersion
+![H_K](https://github.com/user-attachments/assets/be5d3ed9-c6a7-4560-8397-f9ae81eab9af)
 
-        Calcul de l’écart-type (volatilité) du taux de ponctualité par ligne
 
-    Visualisations interactives
+#### Lignes en Difficulté (A & B)
 
-        Graphiques en barres : fréquence des lignes les plus ou moins ponctuelles
+**Ligne A :**
+- Malgré des performances historiquement faibles, montre des signes d'amélioration depuis novembre 2018
+- Tend à se rapprocher progressivement des performances des autres lignes (par rapport à la médiane toutes lignes confondues)
+- Fini par dépasser plusieurs fois les performances du RER B
 
-        Graphiques en ligne : évolution du taux de ponctualité des lignes les plus emblématiques
+**Ligne B :**
+- Baisse en performance depuis fin 2019 en s'éloignant progressivement de la médiane
 
-🏆 Lignes les plus ponctuelles
-📅 Sur toute la période
+![A_B](https://github.com/user-attachments/assets/e9d12979-84c4-4e88-b774-899fff5cc61b)
 
-    La ligne H est apparue comme la plus ponctuelle le plus grand nombre de fois.
 
-    D'autres lignes comme K montrent également de très bons résultats.
+## Analyse Comparative
 
-👉 Visualisation :
-Visuel montrant les lignes avec les meilleures ponctualités depuis janvier 2013
-![best_over_time](https://github.com/user-attachments/assets/4eb2ec7a-d70f-4003-b934-b2819463b3c7)
+L'écart de performance entre les lignes les plus et moins performantes révèle des différences opérationnelles significatives. Les lignes H et K démontrent qu'un haut niveau de ponctualité est atteignable et maintenable sur le réseau Transilien, tandis que les résultats des lignes A et B suggèrent des défis spécifiques à ces tracés.
 
+![A_B](https://github.com/user-attachments/assets/5a02e67a-a7b4-4293-866e-2af8e1b90c87)
 
-📆 Depuis janvier 2024
 
-    La ligne K domine clairement avec de nombreuses apparitions en tête de classement.
-![best_since_2024](https://github.com/user-attachments/assets/27ae069f-92a8-4380-a61f-3ea9fc63f2bf)
+### Études Complémentaires
+- Analyser les facteurs opérationnels différenciant les performances : fréquentations et météo notamment
 
-🚨 Lignes les moins ponctuelles
-📅 Sur toute la période
+## Conclusion
 
-    La ligne A est régulièrement la moins ponctuelle.
+Cette analyse révèle un réseau Transilien à deux vitesses, avec des lignes excellentes (H, K) et d'autres en difficulté (A, B). 
 
-👉 Visualisation :
-Visuel montrant les lignes avec les moins bonnes ponctualités depuis janvier 2013
-![worst_over_time](https://github.com/user-attachments/assets/420581de-c001-4c75-b8f2-ab00ad99ff16)
-
-📆 Depuis janvier 2024
-
-    La ligne B se distingue par des résultats particulièrement bas.
-
-Et depuis 2024
-![worst_since_2024](https://github.com/user-attachments/assets/d9bd4034-d521-4408-97fd-69a16a47bc9d)
-
-📈 Évolution temporelle
-Comparaison des meilleures lignes
-
-    Lignes analysées : H (historique), K (2024)
-
-    La ligne H montre une performance globalement stable avec des pics de performance.
-
-    La ligne K affiche une nette amélioration en 2024.
-
-Comparaison des pires lignes
-
-    Lignes analysées : A (historique), B (2024)
-
-    Les performances de la ligne A sont constamment faibles.
-
-    La ligne B présente une grande variabilité et des pics de très faible ponctualité en 2024.
-
-👉 Visualisations :
-
-    Lignes de temps interactives avec couleurs personnalisées
-
-📊 Analyse comparative – Focus sur 4 lignes
-
-Un graphique final illustre l’évolution des lignes :
-
-    Performantes : H (historique), K (depuis 2024)
-
-    Défaillantes : A (historique), B (depuis 2024)
-
-Ce graphique comprend :
-
-    Courbes de tendance
-
-    Ligne de seuil de performance à 80%
-
-    Annotations des valeurs extrêmes (meilleurs et pires mois)
-
-📌 Enseignements clés
-
-    Certaines lignes comme H et K se distinguent par leur constance ou leur progression récente.
-
-    D’autres, comme A et B, montrent des difficultés structurelles de ponctualité.
-
-    L’écart-type par ligne confirme que certaines souffrent d’une ponctualité instable.
-
-🛠️ Compétences mobilisées
-
-    Python : pandas, matplotlib, seaborn, plotly
-
-    Traitement et nettoyage de séries temporelles
-
-    Agrégation, groupby et statistiques descriptives
-
-    Visualisations interactives (Plotly)
-
-    Ajout d’annotations dynamiques et interprétables
-
-🔮 Perspectives
-
-    Intégration d'autres variables (trafic, météo, incidents)
-
-    Modélisation prédictive de la ponctualité
-
-    Création d’un dashboard interactif (ex. Streamlit ou Dash)
+La tendance d'amélioration observée sur la ligne A constitue malgré tout un signal positif.
