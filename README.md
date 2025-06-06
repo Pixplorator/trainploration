@@ -3,6 +3,7 @@
 🎯 Objectif
 
 Ce projet vise à analyser l’évolution de la ponctualité des lignes Transilien (Ile-de-France) depuis le début des mesures disponibles, en identifiant les lignes les plus et les moins ponctuelles, à la fois sur l'ensemble de la période et spécifiquement depuis janvier 2024.
+
 🧩 Données
 
     Source : Fichier ponctualite-mensuelle-transilien.csv
@@ -56,15 +57,14 @@ Ce projet vise à analyser l’évolution de la ponctualité des lignes Transili
 
     D'autres lignes comme K montrent également de très bons résultats.
 
-📆 Depuis janvier 2024
-
-    La ligne K domine clairement avec de nombreuses apparitions en tête de classement.
-
 👉 Visualisation :
 Visuel montrant les lignes avec les meilleures ponctualités depuis janvier 2013
 ![best_over_time](https://github.com/user-attachments/assets/4eb2ec7a-d70f-4003-b934-b2819463b3c7)
 
-Et depuis 2024 
+
+📆 Depuis janvier 2024
+
+    La ligne K domine clairement avec de nombreuses apparitions en tête de classement.
 ![best_since_2024](https://github.com/user-attachments/assets/27ae069f-92a8-4380-a61f-3ea9fc63f2bf)
 
 🚨 Lignes les moins ponctuelles
@@ -72,13 +72,13 @@ Et depuis 2024
 
     La ligne A est régulièrement la moins ponctuelle.
 
-📆 Depuis janvier 2024
-
-    La ligne B se distingue par des résultats particulièrement bas.
-
 👉 Visualisation :
 Visuel montrant les lignes avec les moins bonnes ponctualités depuis janvier 2013
 ![worst_over_time](https://github.com/user-attachments/assets/420581de-c001-4c75-b8f2-ab00ad99ff16)
+
+📆 Depuis janvier 2024
+
+    La ligne B se distingue par des résultats particulièrement bas.
 
 Et depuis 2024
 ![worst_since_2024](https://github.com/user-attachments/assets/d9bd4034-d521-4408-97fd-69a16a47bc9d)
